@@ -1,13 +1,13 @@
 # tum-live-recorder
-Mit diesen Bash-Skripten kann der aktuell laufende Livestream aus den MW0001/MW2001 Hörsälen von live.rbg.tum.de aufgezeichnet werden.    
+Mit diesen Bash-Skripten kann der aktuell laufende Livestream aus den MW0001/MW2001 Hörsälen von live.rbg.tum.de lokal aufgezeichnet werden.    
 Für andere Hörsäle und/oder Perspektiven kann das `URL_REGEX` in _\_saveCurrentStream.sh_ abgeändert werden.
 
 
 # VORAUSSETZUNGEN:
-- ffmpeg muss installiert sein
+- _ffmpeg_ muss installiert sein
   - macOS mit Homebrew:  `$ brew install ffmpeg`
   - Linux:               `$ sudo apt install ffmpeg` bzw. `$ brew install ffmpeg`
-- NUR macOS: gdate (GNU date) muss installiert sein
+- NUR macOS: _gdate_ (GNU date) muss installiert sein
   - mit Homebrew:        `$ brew install coreutils`
 (für macOS-User, die kein Homebrew installiert haben: schämt euch —> https://brew.sh)
 
@@ -36,6 +36,6 @@ Der Ausgabe-Ordner ist standardmäßig _./saved_, dieser kann aber über `OUTPUT
 
 Die Aufnahme stoppt automatisch, wenn der Stream beendet wird oder nach spätestens 2 Stunden (konfigurierbar in _\_saveCurrentStream.sh_).
 Um die Aufnahme manuell zu beenden, einfach mit `CTRL-C` einen Interrupt schicken.   
-**ACHTUNG**: nur _EINMAL_ (nicht mehrfach!) `CTRL-C` drücken und warten bis ffmpeg sich beendet! Andernfalls kann der Header der MP4-Datei beschädigt und die Datei damit nicht abgespielt werden!
+**ACHTUNG**: nur _EINMAL_ (nicht mehrfach!) `CTRL-C` drücken und warten bis _ffmpeg_ sich beendet! Andernfalls kann der Header der MP4-Datei beschädigt und die Datei damit nicht abgespielt werden!
 
 Unter macOS geht der Computer zudem nicht in den Ruhezustand während das Skript läuft (Bildschirmruhezustand wird nicht beeinflusst).
