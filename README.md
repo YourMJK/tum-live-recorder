@@ -1,5 +1,5 @@
 # tum-live-recorder
-Mit diesen Bash-Skripten kann der aktuell laufende Livestream aus den MW0001/MW2001 Hörsälen von live.rbg.tum.de aufgezeichnet werden.    
+Mit diesen Bash-Skripten kann der aktuell laufende Livestream aus den MW0001/MW2001 Hörsälen von live.rbg.tum.de lokal aufgezeichnet werden.    
 Für andere Hörsäle und/oder Perspektiven kann das `URL_REGEX` in _\_saveCurrentStream.sh_ abgeändert werden.
 
 
