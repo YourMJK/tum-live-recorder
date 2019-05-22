@@ -3,7 +3,7 @@
 
 
 URL_REGEX="https://live\.rbg\.tum\.de/cgi-bin/streams/MW.001/COMB"  # MW0001/MW2001 - Präsentation & Kamera
-TIMEOUT="02:00:00"  # Maximum recording length
+TIMEOUT="01:45:00"  # Maximum recording length
 
 
 DIR="$(dirname "$0")"
@@ -45,12 +45,12 @@ then
 	echo "-" > "$FFMPEG_INPUT"  # decrease ffmpeg's loglevel verbosity to "warning" (after info was printed)
 	
 	sleep 2
-	echo -e "\n\033[0;31m⬤\033[1m Recording\033[0m '$URL' stream to '$FILE'...\n(CRL-C to stop recording)\n"
+	echo -e "\n\033[0;31m⬤\033[1m Recording\033[0m '$URL' stream to '$FILE'... ($(date +%H:%M:%S))\n(CRL-C to stop recording)\n"
 	
 	interrupt_handler() {
-		[[ $INTERRUPTED -eq 1 ]] && exit 0
+		[[ $INTERRUPTED -eq 1 ]] && return 0
 		INTERRUPTED=1
-		echo -e "\n\n\033[1m◼︎ Stopping recording...\033[0m"
+		echo -e "\n\n\033[1m◼︎ Stopping recording...\033[0m ($(date +%H:%M:%S))"
 		#kill -INT $FFMPEG_PID
 		echo "q" > "$FFMPEG_INPUT"  # tell ffmpeg to quit
 		wait $FFMPEG_PID

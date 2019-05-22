@@ -41,7 +41,6 @@ then
 	done
 	echo -e "\n"
 	
-	
 	# start recording
 	if [ $# -ge 2 ]
 	then $saveCurrentStream "$OUTPUT_DIR" "$1"
