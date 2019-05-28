@@ -52,7 +52,7 @@ else
 	echo ""
 	echo "Examples:  $CMD now"
 	echo "           $CMD 13:15"
-	echo "           $CMD \"tommorow 08:15\""
+	echo "           $CMD \"tomorrow 08:15\""
 	echo "           $CMD \"wed 08:15\""
 	echo ""
 	echo "           $CMD 08:15 LA"
