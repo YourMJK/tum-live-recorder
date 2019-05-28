@@ -42,7 +42,7 @@ Unter macOS geht der Computer zudem nicht in den Ruhezustand während das Skript
 
 
 
-# tum-live-recorder
+# tum-live-recorder (english)
 These Bash-Skripts may be used to record the currently available livestreams of MW0001/MW2001 at live.rbg.tum.de locally.
 To record different rooms or video feeds the property `URL_REGEX` in _\_saveCurrentStream.sh_ may be changed.
 
@@ -79,6 +79,6 @@ The output folder is _./saved_ by default. May be changed using the parameter `O
 
 Recording stops if the stream ends or after 2 hours (delay defined in _\_saveCurrentStream.sh_).
 To manually stop recording use `CTRL-C` once to interrupt the program.   
-**Attention**: only press `CTRL-C` _ONCE_ (not multiple times!) and wait until _ffmpeg_ terminates! Interrupting _ffmpeg_ may cause damage to the header of the MP4 file and prevent it from being played!
+**ATTENTION**: only press `CTRL-C` _ONCE_ (not multiple times!) and wait until _ffmpeg_ terminates! Interrupting _ffmpeg_ may cause damage to the header of the MP4 file and prevent it from being played!
 
 MacOS is prevented from sleeping while the script is running (screensaver not influenced).
