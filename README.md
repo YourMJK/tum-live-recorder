@@ -60,7 +60,7 @@ To allow execution of the scripts, navigate in the folder (containg the files) a
 
 # Example calls:
 - `$ ./record.sh now`    
-  Immediatly starts recoding and saves to _./saved/YYYY-MM-DD.mp4_
+  Immediatly start recoding and save to _./saved/YYYY-MM-DD.mp4_
 
 - `$ ./record.sh "tomorrow 08:30"`    
   Wait until 08:30 AM tomorrow to start recording
@@ -72,7 +72,7 @@ To allow execution of the scripts, navigate in the folder (containg the files) a
   Wait until the next wednesdas 08:30 AM to start recording
 
 - `$ ./record.sh 10min LA`    
-  Wait for 10 minutes to start recodring and saves to _./saved/LA.mp4_ (or _./saved/LA_2.mp4_ if already exists)
+  Wait for 10 minutes to start recodring and save to _./saved/LA.mp4_ (or _./saved/LA_2.mp4_ if already exists)
 
 
 The output folder is _./saved_ by default. May be changed using the parameter `OUTPUT_DIR` in _record.sh_.
