@@ -39,3 +39,46 @@ Um die Aufnahme manuell zu beenden, einfach mit `CTRL-C` einen Interrupt schicke
 **ACHTUNG**: nur _EINMAL_ (nicht mehrfach!) `CTRL-C` drücken und warten bis _ffmpeg_ sich beendet! Andernfalls kann der Header der MP4-Datei beschädigt und die Datei damit nicht abgespielt werden!
 
 Unter macOS geht der Computer zudem nicht in den Ruhezustand während das Skript läuft (Bildschirmruhezustand wird nicht beeinflusst).
+
+
+
+# tum-live-recorder (english)
+These Bash-Skripts may be used to record the currently available livestreams of MW0001/MW2001 at live.rbg.tum.de locally.
+To record different rooms or video feeds the property `URL_REGEX` in _\_saveCurrentStream.sh_ may be changed.
+
+
+# Requirements:
+- _ffmpeg_ has to be installed
+  - macOS using Homebrew:  `$ brew install ffmpeg`
+  - Linux:               `$ sudo apt install ffmpeg` or `$ brew install ffmpeg`
+- ONLY macOS: _gdate_ (GNU date) has to be installed
+  - using Homebrew:        `$ brew install coreutils`
+(to macOS-Users, who do not have Homebrew: install Homebrew (also be ashamed - mjk) —> https://brew.sh)
+
+To allow execution of the scripts, navigate in the folder (containg the files) and execute `$ chmod +x *.sh`
+
+
+# Example calls:
+- `$ ./record.sh now`    
+  Immediatly start recoding and save to _./saved/YYYY-MM-DD.mp4_
+
+- `$ ./record.sh "tomorrow 08:30"`    
+  Wait until 08:30 AM tomorrow to start recording
+
+- `$ ./record.sh 13:30`    
+  Wait until 01:30 PM (on the same day) to start recoding
+
+- `$ ./record.sh "wed 8:15"`    
+  Wait until the next wednesdas 08:30 AM to start recording
+
+- `$ ./record.sh 10min LA`    
+  Wait for 10 minutes to start recodring and save to _./saved/LA.mp4_ (or _./saved/LA_2.mp4_ if already exists)
+
+
+The output folder is _./saved_ by default. May be changed using the parameter `OUTPUT_DIR` in _record.sh_.
+
+Recording stops if the stream ends or after 2 hours (delay defined in _\_saveCurrentStream.sh_).
+To manually stop recording use `CTRL-C` once to interrupt the program.   
+**ATTENTION**: only press `CTRL-C` _ONCE_ (not multiple times!) and wait until _ffmpeg_ terminates! Interrupting _ffmpeg_ may cause damage to the header of the MP4 file and prevent it from being played!
+
+MacOS is prevented from sleeping while the script is running (screensaver not influenced).
