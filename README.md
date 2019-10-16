@@ -9,7 +9,7 @@ Für andere Hörsäle und/oder Perspektiven kann das `URL_REGEX` in _\_saveCurre
   - Linux:               `$ sudo apt install ffmpeg` bzw. `$ brew install ffmpeg`
 - NUR macOS: _gdate_ (GNU date) muss installiert sein
   - mit Homebrew:        `$ brew install coreutils`
-(für macOS-User, die kein Homebrew installiert haben: schämt euch —> https://brew.sh)
+(für macOS-User, die kein Homebrew installiert haben: schämt euch ;) —> https://brew.sh)
 
 Um die Skripte ausführbar zu machen, einfach in den Ordner (in der diese Datei liegt) navigieren und `$ chmod +x *.sh`
 ausführen.
