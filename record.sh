@@ -43,7 +43,7 @@ then
 	
 	# start recording
 	if [ $# -ge 2 ]
-	then $saveCurrentStream "$OUTPUT_DIR" "$1"
+	then $saveCurrentStream "$OUTPUT_DIR" "$2"
 	else $saveCurrentStream "$OUTPUT_DIR"
 	fi
 else
