@@ -35,11 +35,11 @@ then
 		DELTA_TIME=$((TARGET_TIME-CURRENT_TIME-1))
 		COUNTDOWN="$($date -ud "@$DELTA_TIME" +%H:%M:%S)"
 		[ $DELTA_TIME -ge 86400 ] && COUNTDOWN="$((DELTA_TIME/86400)) day(s) and $COUNTDOWN"
-		echo -ne "\r$COUNTDOWN\033[0K"
+		echo -ne "\r$COUNTDOWN\033[0K" 1>&2
 		sleep 1
 		CURRENT_TIME=$(date +%s)
 	done
-	echo -e "\n"
+	echo -e "\n" 1>&2
 	
 	# start recording
 	if [ $# -ge 2 ]
