@@ -3,7 +3,7 @@
 
 
 URL_REGEX="https://live\.rbg\.tum\.de/cgi-bin/streams/MW.001.*/COMB"  # MW0001/MW2001 - Präsentation & Kamera
-TIMEOUT="01:45:00"  # Maximum recording length
+TIMEOUT="03:00:00"  # Maximum recording length
 
 
 DIR="$(dirname "$0")"
