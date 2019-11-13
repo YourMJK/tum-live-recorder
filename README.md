@@ -34,7 +34,7 @@ ausführen.
 
 Der Ausgabe-Ordner ist standardmäßig _./saved_, dieser kann aber über `OUTPUT_DIR` in _record.sh_ angepasst werden.
 
-Die Aufnahme stoppt automatisch, wenn der Stream beendet wird oder nach spätestens 2 Stunden (konfigurierbar in _\_saveCurrentStream.sh_).
+Die Aufnahme stoppt automatisch, wenn der Stream beendet wird oder nach spätestens 3 Stunden (konfigurierbar in _\_saveCurrentStream.sh_).
 Um die Aufnahme manuell zu beenden, einfach mit `CTRL-C` einen Interrupt schicken.   
 **ACHTUNG**: nur _EINMAL_ (nicht mehrfach!) `CTRL-C` drücken und warten bis _ffmpeg_ sich beendet! Andernfalls kann der Header der MP4-Datei beschädigt und die Datei damit nicht abgespielt werden!
 
@@ -55,7 +55,7 @@ To record different rooms or video feeds the property `URL_REGEX` in _\_saveCurr
   - using Homebrew:        `$ brew install coreutils`
 (to macOS-Users, who do not have Homebrew: install Homebrew (also be ashamed - mjk) —> https://brew.sh)
 
-To allow execution of the scripts, navigate in the folder (containg the files) and execute `$ chmod +x *.sh`
+To allow execution of the scripts, navigate inside the folder (containing this file) and execute `$ chmod +x *.sh`
 
 
 # Example calls:
@@ -77,7 +77,7 @@ To allow execution of the scripts, navigate in the folder (containg the files) a
 
 The output folder is _./saved_ by default. May be changed using the parameter `OUTPUT_DIR` in _record.sh_.
 
-Recording stops if the stream ends or after 2 hours (delay defined in _\_saveCurrentStream.sh_).
+Recording stops if the stream ends or after 3 hours (delay defined in _\_saveCurrentStream.sh_).
 To manually stop recording use `CTRL-C` once to interrupt the program.   
 **ATTENTION**: only press `CTRL-C` _ONCE_ (not multiple times!) and wait until _ffmpeg_ terminates! Interrupting _ffmpeg_ may cause damage to the header of the MP4 file and prevent it from being played!
 
