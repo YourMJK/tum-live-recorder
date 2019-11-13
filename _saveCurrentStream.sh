@@ -20,7 +20,7 @@ error() {
 if [ $# -ge 1 ]
 then
 	# extract stream url
-	URL=$(curl -s "https://live.rbg.tum.de/cgi-bin/streams" | grep "$URL_REGEX" | head -n1 | sed "s|.*https|https|g" | sed "s|\".*||g") && \
+	URL=$(curl -s "https://live.rbg.tum.de/cgi-bin/streams" | grep -m2 "$URL_REGEX" | sort -r | head -n1 | sed "s|.*https|https|g" | sed "s|\".*||g") && \
 	STREAM_URL=$($getStreamURL "$URL")
 	[[ "$STREAM_URL" = "" ]] && error "No stream url found. ($URL_REGEX)\nStream currently not live?"
 	[[ ! "$STREAM_URL" =~ https.*\.m3u8 ]] && error "Invalid stream url \"$STREAM_URL\""
