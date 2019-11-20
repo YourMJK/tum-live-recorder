@@ -11,8 +11,7 @@ Für andere Hörsäle und/oder Perspektiven kann das `URL_REGEX` in _\_saveCurre
   - mit Homebrew:        `$ brew install coreutils`
 (für macOS-User, die noch kein Homebrew installiert haben —> https://brew.sh)
 
-Um die Skripte ausführbar zu machen, einfach in den Ordner (in der diese Datei liegt) navigieren und `$ chmod +x *.sh`
-ausführen.
+Eventuell müssen die Skripte noch ausführbar gemacht werden, indem in den Ordner (in der diese Datei liegt) navigiert und `$ chmod +x *.sh` ausgeführt wird.
 
 
 # BEISPIELE:
@@ -58,7 +57,7 @@ To record different rooms or video feeds the property `URL_REGEX` in _\_saveCurr
   - using Homebrew:        `$ brew install coreutils`
 (to macOS-Users, who do not have Homebrew yet —> https://brew.sh)
 
-To allow execution of the scripts, navigate inside the folder (containing this file) and execute `$ chmod +x *.sh`
+To allow execution of the scripts, you may need to navigate inside the folder (containing this file) and execute `$ chmod +x *.sh`
 
 
 # Example calls:
