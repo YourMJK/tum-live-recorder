@@ -7,9 +7,9 @@ Für andere Hörsäle und/oder Perspektiven kann das `URL_REGEX` in _\_saveCurre
 - _ffmpeg_ muss installiert sein
   - macOS mit Homebrew:  `$ brew install ffmpeg`
   - Linux:               `$ sudo apt install ffmpeg` bzw. `$ brew install ffmpeg`
-- NUR macOS: _gdate_ (GNU date) muss installiert sein
+- NUR macOS: _gdate_ (GNU date) muss installiert sein (nur notwendig für _record.sh_ Skript)
   - mit Homebrew:        `$ brew install coreutils`
-(für macOS-User, die kein Homebrew installiert haben: schämt euch ;) —> https://brew.sh)
+(für macOS-User, die noch kein Homebrew installiert haben —> https://brew.sh)
 
 Um die Skripte ausführbar zu machen, einfach in den Ordner (in der diese Datei liegt) navigieren und `$ chmod +x *.sh`
 ausführen.
@@ -41,6 +41,9 @@ Um die Aufnahme manuell zu beenden, einfach mit `CTRL-C` einen Interrupt schicke
 Unter macOS geht der Computer zudem nicht in den Ruhezustand während das Skript läuft (Bildschirmruhezustand wird nicht beeinflusst).
 
 
+Wer den tum-live-recorder in einem eigenen Skript/Programm einbauen will oder das Planen von Aufzeichnungen lieber [Cron](https://de.wikipedia.org/wiki/Cron) überlassen will, kann dies einfach mit Hilfe des _\_saveCurrentStream.sh_ Skriptes machen.
+
+
 
 # tum-live-recorder (english)
 These Bash-Skripts may be used to record the currently available livestreams of MW0001/MW2001 at live.rbg.tum.de locally.
@@ -51,9 +54,9 @@ To record different rooms or video feeds the property `URL_REGEX` in _\_saveCurr
 - _ffmpeg_ has to be installed
   - macOS using Homebrew:  `$ brew install ffmpeg`
   - Linux:               `$ sudo apt install ffmpeg` or `$ brew install ffmpeg`
-- ONLY macOS: _gdate_ (GNU date) has to be installed
+- ONLY macOS: _gdate_ (GNU date) has to be installed (only needed for _record.sh_ script)
   - using Homebrew:        `$ brew install coreutils`
-(to macOS-Users, who do not have Homebrew: install Homebrew (also be ashamed - mjk) —> https://brew.sh)
+(to macOS-Users, who do not have Homebrew yet —> https://brew.sh)
 
 To allow execution of the scripts, navigate inside the folder (containing this file) and execute `$ chmod +x *.sh`
 
@@ -82,3 +85,6 @@ To manually stop recording use `CTRL-C` once to interrupt the program.
 **ATTENTION**: only press `CTRL-C` _ONCE_ (not multiple times!) and wait until _ffmpeg_ terminates! Interrupting _ffmpeg_ may cause damage to the header of the MP4 file and prevent it from being played!
 
 MacOS is prevented from sleeping while the script is running (screensaver not influenced).
+
+
+If you want to integrate the tum-live-recorder into your own script/program or you rather want to leave the scheduling job to [Cron](https://en.wikipedia.org/wiki/Cron), you can simply do that by using the _\_saveCurrentStream.sh_ script!
